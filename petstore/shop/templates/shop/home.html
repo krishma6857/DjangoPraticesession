@@ -1,0 +1,26 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="row"> 
+
+
+    {% for i in t %}
+    <div class="col-xl-3" id="d1">
+        <div class="card" style="width: 18rem;">
+            <img src="{{i.Prod_image.url}}" class="card-img-top" alt="..." height="200px" width="100px">
+            <div class="card-body">
+                <h5 class="card-title">{{i.Prod_id}}</h5>
+                <p class="card-text">{{i.Prod_name}}</p>
+                <a href="#" class="btn btn-primary">buy</a>
+                <a href="#" class="btn btn-primary">add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+</div>
